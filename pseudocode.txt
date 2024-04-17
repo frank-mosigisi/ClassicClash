@@ -1,0 +1,18 @@
+//This func will make computer play
+A function called getComputerChoice
+randomly return either 'Rock', paper, scissors
+test that it works
+
+Write a function called singleroundPlay
+Takes two parameters, the playerselection and computerSelection()
+Returns a string that declared the winner or tie
+    "You Lose! "Paper" beats "Rock""
+    playerselection parameter needs to be case insensitive
+
+    need to return result of function call not console.log since we will use it later
+
+
+Function called playGame()
+    Call the singleRoundPlay 5 times in a row/ use loops if I know them
+    use console.log to display the result of playGame
+    use propmt() to get input of user
