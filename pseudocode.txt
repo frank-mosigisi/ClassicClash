@@ -3,13 +3,15 @@ A function called getComputerChoice
 randomly return either 'Rock', paper, scissors
 test that it works
 
-Write a function called singleroundPlay
-Takes two parameters, the playerselection and computerSelection()
-Returns a string that declared the winner or tie
-    "You Lose! "Paper" beats "Rock""
-    playerselection parameter needs to be case insensitive
+Write a function called playround
+Takes two parameters, the playerselection and computerSelection 
 
-    need to return result of function call not console.log since we will use it later
+creates an if function to check whether you won or draw and 
+return appropriate message "You Lose! "Paper" beats "Rock""
+
+playerselection parameter needs to be case insensitive
+// add a condition to check if no selection is made tell them a choice was not made
+need to return result of function call not console.log since we will use it later
 
 
 Function called playGame()
