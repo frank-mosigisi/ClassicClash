@@ -1,12 +1,12 @@
 function getComputerChoice(){
-    let rockPaperScissorArray =['rock', 'paper', 'scissors'];
-    return rockPaperScissorArray[Math.floor(Math.random()* rockPaperScissorArray.length)] 
+    let rockPaperScissorsArray =['rock', 'paper', 'scissors'];
+    return rockPaperScissorsArray[Math.floor(Math.random()* rockPaperScissorsArray.length)] 
 }
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLocaleLowerCase()
+    playerSelection = playerSelection.toLowerCase()
 //  Create a dictionary to show which beats the other
-    let didNotBeat = {
+    const didNotBeat = {
         rock : 'scissors',
         paper : 'rock',
         scissors : 'paper',
