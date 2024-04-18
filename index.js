@@ -1,22 +1,11 @@
 function getComputerChoice(){
     let rockPaperScissorArray =['rock', 'paper', 'scissors'];
-    // let pick = rockPaperScissorArray[Math.floor(Math.random()* rockPaperScissorArray.length)]
-    // return pick
     return rockPaperScissorArray[Math.floor(Math.random()* rockPaperScissorArray.length)] 
 }
 
-// console.log('This is pick 1',  getComputerChoice())
-// console.log('This is pick 2',  getComputerChoice())
-// console.log('This is pick 3',  getComputerChoice())
-// console.log('This is pick 4',  getComputerChoice())
-// console.log('This is pick 5',  getComputerChoice())
-// console.log('This is pick 6',  getComputerChoice())
-
-let Question = prompt ("Hey mate make a choice between rock, paper or scissors", '')
-// ensuring the answer is always in lowecase
-let playerSelection = Question.toLocaleLowerCase()
 function playRound(playerSelection, computerSelection){
-//  create a dictionary to show which beats the other
+    playerSelection = playerSelection.toLocaleLowerCase()
+//  Create a dictionary to show which beats the other
     let didNotBeat = {
         rock : 'scissors',
         paper : 'rock',
@@ -25,24 +14,79 @@ function playRound(playerSelection, computerSelection){
 
     if (playerSelection === computerSelection)
     {
-        return `Its a draw! ${computerSelection} equals ${playerSelection}`
+        console.log (`Its a draw! ${computerSelection} equals ${playerSelection}`)
+        let answer = 'Its a draw'
+        return answer
 
     } else if (computerSelection === didNotBeat[playerSelection])
     {
-        return `you won! ${playerSelection} beats ${computerSelection}`
+        console.log(`You won! ${playerSelection} beats ${computerSelection}`)
+        let answer = 'Player won'
+        return answer
     }
     else if (playerSelection === didNotBeat[computerSelection])
     {
-        return `You lost! ${computerSelection} beats ${playerSelection}`
+        console.log( `You lost! ${computerSelection} beats ${playerSelection}`)
+        let answer = 'Computer won'
+        return answer
 
     } else {
-        
-        return ` you did not input correct arguments. Your input was ${playerSelection} Try again!!!`
+        console.log(` You didn't input the correct arguments. Your input was ${playerSelection}. Try again!!!`)
+        let answer = ' Wrong input'
+        return answer
     }
 }
+// let playerSelection = 'rock'
+// const computerSelection = getComputerChoice();
+// console.log('This is the computer selection', computerSelection)
+// console.log('This is the player selection', playerSelection)
+// console.log (playRound(playerSelection, computerSelection))
 
-const computerSelection = getComputerChoice();
-console.log('This is the computer selection', computerSelection)
-console.log('This is the player selection', playerSelection)
-// alert (playRound(playerSelection, computerSelection))
-return playRound(playerSelection, computerSelection)
+
+
+function playGame() {
+
+    let player  = 0;
+    let computer = 0;
+    let total = 5
+
+    for (let c = 0; c < total ; c++){
+
+        let playerSelection = prompt ("Hey mate make a choice between rock, paper or scissors", '')
+        
+        let computerSelection = getComputerChoice();
+        console.log('This is the computer selection', computerSelection)
+
+        let roundResult = playRound(playerSelection, computerSelection);
+
+        if ( roundResult === 'Player won' )
+        {
+            alert ( "You won")
+            player++
+
+        } else if (roundResult === 'Computer won'){
+            computer++
+            alert ( "You lost")
+        }
+        else if ( roundResult === 'Its a draw'){
+            alert ("Its a draw")}
+        else {
+            alert ("Wrong Input")
+        }
+
+        console.log('total score is for player is ', player)
+        console.log('total score is for computer is ', computer)
+
+    }
+    let winner =
+    (player > computer)? `Congrats Player you won by ${player} points`:
+    (computer > player)? `Congrats the Computer won by ${computer} points`:
+    (computer === player)? `You tied with the computer better luck next time`:
+    '';
+
+alert (winner);
+
+}
+
+playGame()
+
