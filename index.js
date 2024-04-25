@@ -5,7 +5,9 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase()
-//  Create a dictionary to show which beats the other
+// created a dictionary to define what beats what in rock paper
+// scissors so that I could reduce the number of if else statements 
+// I had to write
     const didNotBeat = {
         rock : 'scissors',
         paper : 'rock',
