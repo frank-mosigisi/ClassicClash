@@ -1,0 +1,22 @@
+#container {
+          color: black;
+          display: block;
+}
+
+
+para {
+
+    color: green;
+    display: block;
+    margin-top: 10px;
+    font-size: medium;
+
+}
+
+
+
+.divResults{
+ 
+    margin-top: 40px;
+    font-size: 20px;
+ }
