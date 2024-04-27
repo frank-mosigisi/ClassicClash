@@ -1,59 +1,34 @@
-# Rock-Paper-Scissors Game
+# Rock Paper Scissors Game
 
-This project is a simple, interactive Rock-Paper-Scissors game that can be played in a web browser. The game is implemented in JavaScript and can be initiated with a single function call. It provides a straightforward gaming experience where a player can choose between rock, paper, or scissors and compete against the computer.
+A simple and fun Rock Paper Scissors game implemented in JavaScript, HTML, and CSS.
 
-## Feature Overview
+## Description
 
-- **Easy to Start**: Just call one function, and you are ready to play.
-- **Interactive Play**: The game uses `prompt` for player input and `alert` to announce the results after each round.
-- **Simple UI**: No complicated interfaces; it's pure JavaScript with feedback given through alerts and console logs.
-- **Best of Five Rounds**: The game runs for five rounds, and the player with the most wins at the end is declared the champion.
-- **Score Tracking**: The game keeps track of the score and informs the player after each round.
-- **Input Validation**: Ensures that the player's input matches one of the three choices: rock, paper, or scissors.
+This application simulates a Rock Paper Scissors game where a user plays against the computer. The user selects rock, paper, or scissors, and the computer makes a selection at random. The game displays the winner of each round and keeps track of scores. The game ends and resets when either the player or the computer reaches 5 points. A restart button is also available to manually reset the game at any time.
 
-## Functions
+## Setup
 
-- **getComputerChoice()**: Randomly returns "rock," "paper," or "scissors" as the computer's choice.
-
-- **playRound(playerSelection, computerSelection)**: Takes in the player's choice and the computer's choice, determines the winner of the round, and logs the results to the console.
-
-- **playGame()**: Initiates the game loop, which runs for five rounds. It handles player inputs, calls `playRound` to determine the outcome of each round, and keeps track of the scores.
+1. Clone the repository to your local machine.
+2. Open the `index.html` file in your web browser to start the game.
 
 ## How to Play
 
-1. Open the JavaScript console in your web browser.
-2. Call the `playGame()` function.
-3. When prompted, enter your choice: "rock," "paper," or "scissors."
-4. After each round, an alert will show whether you won, lost, or tied the round.
-5. After five rounds, an alert will show the final results and declare the winner.
+1. Click one of the buttons (`Rock`, `Paper`, `Scissors`) to make a selection.
+2. The computer's choice is randomly selected and displayed on the screen.
+3. The game determines the winner of the round and increments their score by one.
+4. The first to reach 5 points wins the game. After a player reaches 5 points, the game automatically resets.
+5. To reset the game manually, click the `Restart Game` button.
 
-## Getting Started
+## Technologies Used
 
-To set up the game, you can simply copy the JavaScript code into your web browser's console or include it in a web page's script tag. There is no additional setup required.
+- HTML5
+- CSS3
+- Javascript
 
-## Improvements from the Base Version
+## Author
 
-The code has been enhanced with the following improvements:
-
-- Code organization for better readability and maintainability.
-- Improved naming conventions for variables and functions.
-- Separation of game logic from user interaction.
-- Added robust input validation for the player's choices.
-- More descriptive feedback provided to the player after each round.
-- Implemented ES6 features for a more modern codebase.
-
-## Future Enhancements
-
-Planned enhancements to further improve the game experience include:
-
-- A graphical user interface (GUI) for a more engaging user experience.
-- Improved replayability with a "Play Again" feature.
-- A visual scoreboard for real-time score tracking.
-- Announcements of choices and results to make the game more interactive.
-- Further refactoring to streamline the code and improve performance.
+Frankline
 
 ## License
 
-This project is open-sourced and available for anyone to use, modify, and distribute as per the terms specified in the LICENSE file (if provided).
-
-Enjoy the game and may the odds be ever in your favor!
+This project is licensed under the MIT License.
